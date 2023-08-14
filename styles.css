@@ -1,62 +1,106 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    height: 150px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+  }
+  
+  .header-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-.page {
-    background-color: #f5f5f5;
+    gap: 25px;
+  }
+  
+  .square-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  section {
+    height: 305px;
+    background-color: #f0f0f0;
+    display: flex;
+  }
+  
+  nav {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav p {
+    margin: 0;
+  }
+  
+  nav a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  /* ... Otros estilos ... */
+  
+  .vertical-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-h1 {
+  }
+  
+  .oraciones {
     text-align: center;
-    margin: 20px 0;
-}
-
-.entry-box {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-}
-
-.classrooms {
+    margin-bottom: 20px;
+  }
+  
+  .oraciones p {
+    margin: 5px 0;
+  }
+  
+  .imagenes {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.classroom {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-}
-
-.status {
-    font-weight: bold;
-    color: green;
-}
-
-.entry-button {
-    background-color: #007bff;
+  }
+  
+  .imagenes a {
+    margin: 0 10px;
+  }
+  
+  
+  /* ... Otros estilos ... */
+  
+  footer {
+    height: 150px;
+    background-color: #333;
     color: white;
-    border: none;
-    padding: 5px 10px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .arrow {
+    font-size: 24px;
     cursor: pointer;
-}
-
-.entry-button.disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
+  }
+  
+  .left-arrow {
+    position: absolute;
+    left: 10px;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    right: 10px;
+  }

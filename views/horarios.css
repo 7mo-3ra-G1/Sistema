@@ -15,6 +15,7 @@ table {
   th {
     background-color: #f2f2f2;
     color: #333;
+    width: 150px; /* Ajusta el valor según tu preferencia */
   }
   
   tr:nth-child(even) {
@@ -24,6 +25,9 @@ table {
   tr:hover {
     background-color: #f2f2f2;
   }
+  
+  /* ... Otros estilos ... */
+  
   
   /* Estilos para el encabezado */
   header {

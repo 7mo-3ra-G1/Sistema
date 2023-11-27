@@ -3,14 +3,232 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="views/styles.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Mi Página</title>
+  <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Luminari;
+  }
+  header {
+    height: 150px;
+    background-color: e5e5e6;
+    color: white;
+    text-align: center;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .square-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  section {
+    height: 305px;
+    background-color: #353638;
+    display: flex;
+  }
+  
+  nav {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav p {
+    margin: 0;
+  }
+  
+  nav a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  /* ... Otros estilos ... */
+  
+  .vertical-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .oraciones {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .oraciones p {
+    margin: 5px 0;
+  }
+  
+  .imagenes {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagenes img {
+    width: 100px; /* Modifica el ancho aquí */
+    height: auto; /* Esto mantiene la proporción de aspecto */
+  }
+  
+  
+  .imagenes a {
+    margin: 0 12px;
+  }
+  
+  
+  /* ... Otros estilos ... */
+  
+  footer {
+    height: 150px;
+    background-color: #e5e5e6;
+    color: white;
+    text-align: center;
+  }
+  
+  .footer-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .arrow {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .left-arrow {
+    position: absolute;
+    left: 10px;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    right: 10px;
+  }
+  
+  #prevBtn {
+    left: 0;
+  }
+  
+  #nextBtn {
+    right: 0;
+  }
+
+  .carousel-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel img {
+  max-width: 100%;
+  height: auto;
+  width: 100%; /* Añade esta línea para que todas las imágenes tengan el mismo ancho */
+  max-height: 200px; /* Establece una altura máxima para mantener la proporción */
+  object-fit: cover; /* Escala la imagen para llenar el contenedor sin distorsión */
+}
+
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgb(33, 33, 36);
+    font-size: 15px;
+    cursor: pointer;
+    padding: 2px 500px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+/* inicio mapa.html */
+ 
+.header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.section {
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+  overflow: hidden; /* Evita que la imagen se desborde de la sección */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-container {
+  max-width: 75%; /* Ajusta el ancho del map-container según tus preferencias */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Evita que las imágenes se salgan del contenedor */
+}
+
+.section-image {
+  max-width: 100%; /* Limita el ancho de la imagen al 100% del section-image */
+  max-height: 100%; /* Limita la altura de la imagen al 100% del section-image */
+  width: auto; /* Permite que la imagen conserve su relación de aspecto */
+  height: auto; /* Permite que la imagen conserve su relación de aspecto */
+  object-fit: contain; /* Ajusta la imagen para que se ajuste al section sin distorsionarla */
+}
+
+
+.footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+  </style>
 </head>
 <body>
   <header>
     <div class="header-content">
-      <img src="img/imagen1.jpg" alt="Imagen 1" class="square-image">
-      <img src="img/imagen2.jpg" alt="Imagen 2" class="square-image">
+      <img src="../img/imagen1.jpg" alt="Imagen 1" class="square-image">
+      <img src="../img/imagen2.jpg" alt="Imagen 2" class="square-image">
     </div>
   </header>
 
@@ -22,9 +240,9 @@
             <p>Oración 3 <span class="arrow">➞</span></p>
           </nav>
           <nav class="imagenes">
-            <a href="views/link1.html"><img src="img/1.jpg.jpeg" alt="Imagen 3"></a>
-            <a href="views/mapa.php"><img src="img/2.jpg.jpeg" alt="Imagen 4"></a>
-            <a href="https://sayc.netlify.app"><img src="img/3.jpg.jpeg" alt="Imagen 5"></a>
+            <a href="link1.html"><img src="../img/1.jpg.jpeg" alt="Imagen 3"></a>
+            <a href="mapa.html"><img src="../img/2.jpg.jpeg" alt="Imagen 4"></a>
+            <a href="https://sayc.netlify.app"><img src="../img/3.jpg.jpeg" alt="Imagen 5"></a>
           </nav>
         </section>
   
@@ -37,12 +255,12 @@
           <img src="https://i.pinimg.com/564x/53/dd/ac/53ddac3b0b503044d3221be03556cd13.jpg" alt="Imagen 2">
           <img src="https://i.pinimg.com/564x/d9/7e/4f/d97e4f5fe31f944be8fe8079c43fd754.jpg" alt="Imagen 3">
           <img src="https://i.pinimg.com/564x/37/b0/03/37b003811276655d429e53d17c2c6b05.jpg" alt="Imagen 4">
-          <img src="img/abajo5.jpg" alt="Imagen 5">
+          <img src="../img/abajo5.jpg" alt="Imagen 5">
       </div>
       <button id="prevBtn" class="carousel-btn"><h2> < </h2></button>
       <button id="nextBtn" class="carousel-btn"><h2> > </h2></button>
   </div>
-  <script src="views/javascript.js"></script>
+  <script src="javascript.js"></script>
 
 
   </footer>
